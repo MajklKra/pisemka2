@@ -49,5 +49,18 @@ class Books {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function addBook($p_isbn, $p_firstname, $p_surname, $p_title , $p_description)
+    {
+        $sql = 'INSERT INTO books(isbn, firstname, surname, title, description) VALUES(:isbn, :firstname, :surname, :title, :description)';
+
+        $stmt = $this->dbConn->prepare($sql);
+
+        $stmt-> bindParam(':isbn', $p_isbn, PDO::PARAM_STR); 
+        $stmt-> bindParam(':firstname', $p_firstname, PDO::PARAM_STR); 
+        $stmt-> bindParam(':surname', $p_surname, PDO::PARAM_STR); 
+        $stmt-> bindParam(':title', $p_title, PDO::PARAM_STR); 
+        $stmt-> bindParam(':description', $p_description, PDO::PARAM_STR); 
+        return $stmt->execute();
+    }
 
 }
