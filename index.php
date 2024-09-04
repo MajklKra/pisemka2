@@ -17,7 +17,7 @@
         $selTitle = $_GET['title'];
         $selIsbn = $_GET['isbn'];
 
-        $selCars = $instanceBooks->filterBooks($selSurname, $selFirstname, $selTitle, $selIsbn);
+        $selBooks = $instanceBooks->filterBooks($selSurname, $selFirstname, $selTitle, $selIsbn);
     // pokud jsme nic neodeslali, pak tabulka vypisuje všechny auta
     } else {
         $selBooks = $books;
