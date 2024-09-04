@@ -37,14 +37,14 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Knihy</a>
+        <a class="navbar-brand" href="#">Seznam knih </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link" href="index.php">Vyhledávání</a>
+            <a class="nav-link" href="vyhledani.php">Vyhledávání</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="add.php">Přidej Knihu</a>
@@ -54,14 +54,15 @@
     </div>
     </nav>
     <div class="container">
-        <h2 class="h2">Vyhledávání</h2>
-        <form action="index.php" method="get">
+        <br>
+        <h2 class="h2">Seznam knih</h2> <br>
+        <!-- <form action="index.php" method="get">
             <input type="text" name="surname" class="form-control my-2" placeholder="Prijmeni autora">
             <input type="text" name="firstname" class="form-control my-2" placeholder="Zadejte krestni jmeno">
             <input type="text" name="title" class="form-control my-2" placeholder="Zadejte nazev knihy">
             <input type="text" name="isbn" class="form-control my-2" placeholder="Zadejte ISBN">
             <input class="btn btn-primary my-2" type="submit" value="Odešli">
-        </form>
+        </form> -->
         
         <table class="table">
             <tr>
