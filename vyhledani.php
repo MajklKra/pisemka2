@@ -37,26 +37,26 @@ if ((isset($_GET['surname']) && $_GET['surname'] != "") ||
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Knihy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Seznam knih</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color:Gainsboro; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+        <a class="navbar-brand" href="#" style="color:	#40E0D0"><b><i>Majkl K&copy</i></b> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin: 0px auto">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php" style="color:blue; margin-right: 1rem"><b>Seznam knih</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="look.php">Vyhledávání</a>
+                    <a class="nav-link" href="vyhledani.php" style="color:blue; margin-right: 1rem"><b>Vyhledávání</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="add.php">Přidej knihu</a>
-                    </li>
-                </ul>
-            </div>
+                    <a class="nav-link" href="add.php" style="color:blue; margin-right: 1rem"><b>Přidej knihu</b></a>
+                </li>
+            </ul>
         </div>
+    </div>
     </nav>
     <div class="container">
         <h2 class="h2">Vyhledávání</h2>
@@ -79,7 +79,6 @@ if ((isset($_GET['surname']) && $_GET['surname'] != "") ||
                     <th>Příjmení</th>
                     <th>Název knihy</th>
                     <th>Popis</th>
-                    <th>Akce</th>
                 </tr>
                 <?php foreach ($selBooks as $book) : ?>
                     <tr>
@@ -89,9 +88,6 @@ if ((isset($_GET['surname']) && $_GET['surname'] != "") ||
                         <td><?php echo htmlspecialchars($book['surname']); ?></td>
                         <td><?php echo htmlspecialchars($book['title']); ?></td>
                         <td><?php echo htmlspecialchars($book['description']); ?></td>
-                        <td>
-                            <a class="btn btn-danger" href="look.php?delete=<?php echo $book['id']; ?>" onclick="return confirm('Opravdu chcete smazat tuto knihu?');">Smazat</a>
-                        </td>
                     </tr>
                 <?php endforeach; ?>
             </table>

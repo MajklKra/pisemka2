@@ -32,27 +32,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Eidtace vozidla</title>
+    <title>Pridani knihy</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Knihy</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color:Gainsboro; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+        <a class="navbar-brand" href="#" style="color:	#40E0D0"><b><i>Majkl K&copy</i></b> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link" href="index.php">Seznam knih</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="vyhledani.php">Vyhledavani knih</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="add.php">Přidej knihu</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin: 0px auto">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php" style="color:blue; margin-right: 1rem"><b>Seznam knih</b></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="vyhledani.php" style="color:blue; margin-right: 1rem"><b>Vyhledávání</b></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="add.php" style="color:blue; margin-right: 1rem"><b>Přidej knihu</b></a>
+                </li>
+            </ul>
         </div>
     </div>
     </nav>
@@ -64,7 +64,7 @@
             <input type="text" name="firstname" value=""  class="form-control my-2" required placeholder = "jmeno">
             <input type="text" name="surname" value=""  class="form-control my-2" required placeholder = "prijmeni">
             <input type="text" name="title" value=""  class="form-control my-2" required placeholder = "nazev">
-            <input type="text" name="description" value=""  class="form-control my-2" required placeholder = "Popis">
+            <textarea type="text" name="description" value=""  class="form-control my-2" required placeholder = "Popis"></textarea>
             <input type="submit" value="Vloz knihu" class="btn btn-primary my-2" name="add">
         </form>
 

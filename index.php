@@ -31,58 +31,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Seznam knih</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Seznam knih </a>
+<body style="background-image: url('images/library.jpg'); background-size: cover; background-position: center;">
+    <nav class="navbar navbar-expand-lg" style="padding-top: 0px">
+    <div class="container-fluid" style="background-color:Gainsboro; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; opacity: 0.9">
+        <a class="navbar-brand" href="#" style="color:	#40E0D0"><b><i>Majkl K&copy</i></b> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link" href="vyhledani.php">Vyhledávání</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="add.php">Přidej Knihu</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin: 0px auto">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php" style="color:Brown; margin-right: 1rem"><b>Seznam knih</b></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="vyhledani.php" style="color:Brown; margin-right: 1rem"><b>Vyhledávání</b></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="add.php" style="color:Brown; margin-right: 1rem"><b>Přidej knihu</b></a>
+                </li>
+            </ul>
         </div>
     </div>
     </nav>
     <div class="container">
         <br>
-        <h2 class="h2">Seznam knih</h2> <br>
-        <!-- <form action="index.php" method="get">
-            <input type="text" name="surname" class="form-control my-2" placeholder="Prijmeni autora">
-            <input type="text" name="firstname" class="form-control my-2" placeholder="Zadejte krestni jmeno">
-            <input type="text" name="title" class="form-control my-2" placeholder="Zadejte nazev knihy">
-            <input type="text" name="isbn" class="form-control my-2" placeholder="Zadejte ISBN">
-            <input class="btn btn-primary my-2" type="submit" value="Odešli">
-        </form> -->
-        
-        <table class="table">
+        <h2 class="h1" style="margin-top:5rem; margin-bottom: 5rem; Color: White"><b>Seznam knih</b></h2> <br>
+
+        <table class="table" style="border-radius: 15px; border-collapse: separate; border-spacing: 0; overflow: hidden; opacity: 0.9;">
             <tr>
-                <th>ID</th>
-                <th>Prijmeni</th>
-                <th>Jmeno</th>
-                <th>Nazev</th>
-                <th>ISBN</th>
-                <th>Popis</th>
+                <th style="background-color: AliceBlue; color:#40E0D0">ID</th>
+                <th style="background-color: AliceBlue;color:#40E0D0">Přijmení</th>
+                <th style="background-color: AliceBlue;color:#40E0D0">Jméno</th>
+                <th style="background-color: AliceBlue;color:#40E0D0">Název</th>
+                <th style="background-color: AliceBlue;color:#40E0D0">ISBN</th>
+                <th style="background-color: AliceBlue;color:#40E0D0">Popis</th>
             </tr>
             <?php 
                 foreach ($selBooks as $book):
             ?>
                 <tr>
-                    <td><?php echo $book['id']?></td>
-                    <td><?php echo $book['surname']?></td>
-                    <td><?php echo $book['firstname']?></td>
-                    <td><?php echo $book['title']?></td>
-                    <td><?php echo $book['isbn']?></td>
-                    <td><?php echo $book['description']?></td>
+                    <td style="color:LightSlateGray"><?php echo $book['id']?></td>
+                    <td style="color:LightSlateGray"><b><?php echo $book['surname']?></b></td>
+                    <td style="color:LightSlateGray"><?php echo $book['firstname']?></td>
+                    <td style="color:LightSlateGray"><b><?php echo $book['title']?></b></td>
+                    <td style="color:LightSlateGray"><?php echo $book['isbn']?></td>
+                    <td style="color:LightSlateGray"><?php echo $book['description']?></td>
                 </tr>
             <?php 
                 endforeach;

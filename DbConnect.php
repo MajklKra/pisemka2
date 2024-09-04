@@ -4,7 +4,16 @@ class DbConnect
     private $server = 'localhost';
     private $dbname = 'books';
     private $user = 'root';
-    private $pass = '';
+    private $pass = ''; 
+    
+    /*
+    private $server = 'sql8.endora.cz';
+
+    private $dbname = 'majklj1725438768';
+    private $user = 'majklj1725438768';
+    private $pass = 'Ostrava'; 
+     */
+
     private $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_EMULATE_PREPARES => false,
