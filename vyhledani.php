@@ -1,3 +1,32 @@
+<?php
+require_once('Books.php');
+include('DbConnect.php');
+
+$conn = new DbConnect();
+$dbConnection = $conn->connect();
+$instanceBooks = new Books($dbConnection);
+
+// Inicializace proměnné pro výsledky
+$selBooks = [];
+
+// Kontrola, zda jsou vyplněny parametry vyhledávání
+if ((isset($_GET['surname']) && $_GET['surname'] != "") ||
+    (isset($_GET['firstname']) && $_GET['firstname'] != "") ||
+    (isset($_GET['title']) && $_GET['title'] != "") ||
+    (isset($_GET['isbn']) && $_GET['isbn'] != "")
+) {
+    // Načtení hodnot z GET parametrů
+    $selLastname = $_GET['surname'];
+    $selFirstname = $_GET['firstname'];
+    $selTitle = $_GET['title'];
+    $selIsbn = $_GET['isbn'];
+
+    // Zavolání metody pro filtrování knih na základě parametrů
+    $selBooks = $instanceBooks->filterBooks($selLastname, $selFirstname, $selTitle, $selIsbn);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
